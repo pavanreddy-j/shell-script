@@ -17,3 +17,14 @@ then
 else
     echo "Insatlling mysql ... SUCCESS"
 fi
+
+
+dnf install git -y
+
+if [ $? -ne 0 ]
+then 
+    echo "Installing GIT ...FAILURE"
+    exit 1
+else
+    echo "Insatlling GIT ... SUCCESS"
+fi

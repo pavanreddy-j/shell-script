@@ -14,11 +14,13 @@ if [ $? -ne 0 ]
 then # not installed
     dnf install mysql -y
     if [ $? -ne 0 ]
-    echo "Installing mysql ...FAILURE"
-    exit 1
+        echo "Installing mysql ...FAILURE"
+        exit 1
     else
     echo "Insatlling mysql ... SUCCESS"
-fi
+    fi
+
+
 
 # if [ $? -ne 0 ]
 # then 

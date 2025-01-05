@@ -1,10 +1,10 @@
 #!/bin/bash
 
+USERID=$(id -u)
 R="\-e[31m"
 G="\-e[32m"
 Y="\-e[33m"
 
-USERID=$(id -u)
 VALIDATE(){
     if [ $? -ne 0 ]
     then

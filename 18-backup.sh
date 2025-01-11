@@ -70,7 +70,7 @@ then
                 echo "deleting file: $filepath"
             done
     else
-        echo -e "$R Error:: $N Failed to create ZIP file"
+        echo -e "$R Error:: $N Failed to create ZIP files"
         exit 1
     fi 
 else

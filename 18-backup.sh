@@ -55,3 +55,9 @@ echo "files are: $FILES"
 
 echo "Scripts started executing at :$TIMSTAMP" &>>$LOG_FILE_NAME
 
+if [ -n FILES ]
+then
+    echo "files are: $FILES"
+else
+    echo "No files found orlder than $DAYS"
+fi 

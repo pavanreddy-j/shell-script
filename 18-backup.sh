@@ -48,4 +48,4 @@ then
 fi
 
 FILES=$(find $SUORCE_DIR -name  "*.log" -mtime +$DAYS)
-echo "files are:$FILES"
+echo "files are: $FILES"

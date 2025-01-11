@@ -37,4 +37,3 @@ then
     USAGE
 fi 
 
-echo "Scripts started executing at : $TIMSTAMP" &>>$LOG_FILE_NAME

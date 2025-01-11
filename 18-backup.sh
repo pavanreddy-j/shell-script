@@ -8,9 +8,9 @@ N="\e[0m"
 
 SOURCE_DIR=$1
 DEST_DIR=$2
-DAYS=${3:-14} #if user is not providing number of days, we are taking 14 as default
+DAYS=${-14} #if user is not providing number of days, we are taking 14 as default
 
-LOGS_FOLDER="/app-logs"
+LOGS_FOLDER="/home/ec2-user/shellscript-logs"
 LOG_FILE=$(echo $0 | awk -F "/" '{print &NF}' | cut -d "." -f1 )
 TIMESTAMP=$(date +%Y-%m-%d-%H_%M_%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"

@@ -53,8 +53,6 @@ FILES=$(find $SUORCE_DIR -name  "*.log" -mtime +$DAYS)
 
 echo "files are: $FILES"
 
-echo "Scripts started executing at :$TIMSTAMP" &>>$LOG_FILE_NAME
-
 if [ -n FILES ]  # true if there are files to zip
 then
     echo "files are: $FILES"

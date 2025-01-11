@@ -8,7 +8,7 @@ N="\e[0m"
 
 SOURCE_DIR="/home/ec2-user/app-logs"
 
-LOGS_FOLDER="/var/log/expense-logs"
+LOGS_FOLDER="home/ec2-user/shellscripts-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H_%M_%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
@@ -35,6 +35,8 @@ echo "Scripts started executing at : $TIMSTAMP" &>>$LOG_FILE_NAME
 
 FILES_TO_DELETE=$(find $SOURCE_DIR -name "*logs" -mtime +14)
     echo "The Files to be deleted: $FILES_TO_DELETE"
+
+mkdir -p /home/ec2-user/shellscript-logs/
 
 while read -r file 
 do 

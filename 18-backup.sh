@@ -49,7 +49,7 @@ then
     exit 1
 fi
 
-FILES=$(find $SUORCE_DIR -name  "*.log" -mtime +$DAYS)
+FILES=$(find $SOURCE_DIR -name  "*.log" -mtime +$DAYS)
 
 echo "files are: $FILES"
 
@@ -57,7 +57,7 @@ if [ -n FILES ]  # true if there are files to zip
 then
     echo "files are: $FILES"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMSTAMP.zip"
-    find $SUORCE_DIR -name  "*.log" -mtime +$DAYS |zip -@ "$ZIP_FILE"
+    find $SOURCE_DIR -name  "*.log" -mtime +$DAYS |zip -@ "$ZIP_FILE"
 else
     echo "No files found orlder than $DAYS"
 fi 

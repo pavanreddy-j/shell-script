@@ -37,3 +37,12 @@ then
     USAGE
 fi 
 
+if [ ! -d $SOURCE_DIR ]
+then
+    echo -e "$SOURCE_DIR does not exist ..please check"
+fi
+
+if [ ! -d $DEST_DIR ]
+then
+    echo -e "$DEST_DIR does not exist ..please check"
+fi

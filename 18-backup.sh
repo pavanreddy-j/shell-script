@@ -46,3 +46,6 @@ if [ ! -d $DEST_DIR ]
 then
     echo -e "$DEST_DIR does not exist ..please check"
 fi
+
+FILES=$(find $SUORCE_DIR -name  "*.log" +mtime $DAYS)
+echo "files are:$FILES"

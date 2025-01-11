@@ -50,4 +50,8 @@ then
 fi
 
 FILES=$(find $SUORCE_DIR -name  "*.log" -mtime +$DAYS)
+
 echo "files are: $FILES"
+
+echo "Scripts started executing at :$TIMSTAMP" &>>$LOG_FILE_NAME
+
